@@ -1,5 +1,5 @@
 # EvaluateAspNetCoreOnDocker
-DockerでASP.Netコアを評価する。(Evaluate ASP.Net Core on Docker.)
+DockerでASP.NET Coreを評価する。(Evaluate ASP.Net Core on Docker.)
 
 ## MVC_Sample
 - Open棟梁 @ ASP.NET CoreをDockerで動作確認しました。 - OSSコンソーシアム  
