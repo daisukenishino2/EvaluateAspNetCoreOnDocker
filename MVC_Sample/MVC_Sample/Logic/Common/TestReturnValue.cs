@@ -17,6 +17,7 @@
 //*  20xx/xx/xx  ＸＸ ＸＸ         ＸＸＸＸ
 //**********************************************************************************
 
+using System;
 using Touryo.Infrastructure.Business.Common;
 
 namespace MVC_Sample.Logic.Common
@@ -26,13 +27,7 @@ namespace MVC_Sample.Logic.Common
         /// <summary>汎用エリア</summary>
         public object Obj;
 
-        /// <summary>ShipperID</summary>
-        public int ShipperID;
-
-        /// <summary>CompanyName</summary>
-        public string CompanyName;
-
-        /// <summary>Phone</summary>
-        public string Phone;
+        /// <summary>テスト用エリア</summary>
+        public object Obj2;
     }
 }
