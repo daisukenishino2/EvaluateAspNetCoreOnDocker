@@ -18,31 +18,26 @@
 //*
 //**********************************************************************************
 
-//System
-using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace MVC_Sample.Models.ViewModels
 {
     /// <summary>
     /// サンプル アプリ・モデル
     /// </summary>
+    [Serializable]
     public class CrudViweModel : BaseViewModel
     {
-        /// <summary>shippersテーブル</summary>
+        /// <summary>shipper</summary>
+        public ShipperViweModel Shipper { get; set; }
+
+        /// <summary>shippers</summary>
         public List<ShipperViweModel> Shippers { get; set; }
         
         /// <summary>メッセージ</summary>
         public string Message { get; set; }
-
-        /// <summary>ShipperID</summary>
-        public string ShipperID { get; set; }
-        
-        /// <summary>CompanyName</summary>
-        public string CompanyName { get; set; }
-        
-        /// <summary>Phone</summary>
-        public string Phone { get; set; }
         
         #region ドロップダウンリストに表示するアイテム
 
@@ -77,7 +72,7 @@ namespace MVC_Sample.Models.ViewModels
                     new SelectListItem() { Text = "SQL Server / SQL Client", Value = "SQL", Selected = true }, 
                     new SelectListItem() { Text = "Multi-DB / OLEDB.NET", Value = "OLE" }, 
                     new SelectListItem() { Text = "Multi-DB / ODBC.NET", Value = "ODB" }, 
-                    new SelectListItem() { Text = "Oracle / ODP.NET", Value = "SQL" }, 
+                    new SelectListItem() { Text = "Oracle / ODP.NET", Value = "ODP" }, 
                     new SelectListItem() { Text = "DB2 / DB2.NET", Value = "DB2" }, 
                     new SelectListItem() { Text = "HiRDB / HiRDB-DP", Value = "HIR" }, 
                     new SelectListItem() { Text = "MySQL Cnn/NET", Value = "MCN" }, 
