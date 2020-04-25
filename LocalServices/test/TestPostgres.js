@@ -1,19 +1,24 @@
 console.log("To exit, hold down [Ctrl] and press [C] twice.");
 
 //////////
-console.log("Test Redis");
+console.log("Test Postgres");
 
-const Redis = require('ioredis');
-const redis = new Redis();
+var pg = require('pg');
 
-const main = async () => {
+var pool = new pg.Pool({
+  database: 'postgres',
+  user: 'postgres',
+  password: 'seigi@123',
+  host: 'localhost',
+  port: 5432,
+});
 
-const arr = ['key', 'value']
-await redis.set(arr);
-const result = await redis.get('key');
-console.log(result); ///val
-
-  redis.disconnect();
-}
-
-main();
+pool.connect(function(err, client) {
+  if (err) {
+    console.log(err);
+  } else {
+    client.query('SELECT * FROM Shippers', function (err, obj) {
+      console.log(obj.rows);
+    });
+  }
+});

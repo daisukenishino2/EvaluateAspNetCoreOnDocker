@@ -8,10 +8,11 @@ const redis = new Redis();
 
 const main = async () => {
 
-const arr = ['key', 'value']
-await redis.set(arr);
-const result = await redis.get('key');
-console.log(result); ///val
+  const arr = ['key', 'value']
+  await redis.set(arr);
+  
+  const result = await redis.get('key');
+  console.log(result); /// value
 
   redis.disconnect();
 }
