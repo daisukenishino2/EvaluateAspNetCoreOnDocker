@@ -19,21 +19,35 @@ const cnnOpt = {
     useUnifiedTopology: true,
 }
 
-/* データベース名 */
-const dbName = 'testdb';
-
-/* データベース接続 */
+/* 接続をOpen */
 MongoClient.connect(cnnStr, cnnOpt, (err, client) => {
-
-  /* Errorがあれば処理を中断 */
-  assert.equal(null, err);
-
+  if (err) throw err;
+  
   /* 接続に成功すればコンソールに表示 */
   console.log('Connected successfully to server.');
-
-  /** DBを取得 */
-  const db = client.db(dbName);
-
-  /* DBとの接続切断 */
-  client.close();
+  
+  /* データベースを取得 */
+  const db = client.db('testdb');
+  /* テーブルを取得 */
+  const tbl = db.collection('testtbl');
+  
+  /* Delete */
+  tbl.deleteMany({}, function(err, obj) {
+    if (err) throw err;
+    console.log(obj.result.n + " document(s) deleted");
+  });
+  
+  /* Insert */
+  tbl.insertMany([{ name: 'Dan', age: 18 }, { name: 'Bob', age: 22 }, { name: 'John', age: 30 }]);
+  
+  /* Select */
+  tbl.find({}).toArray(function(err, obj) {
+    if (err) throw err;
+    
+    /* 結果の表示 */
+    console.log(obj);
+    
+    /* 接続をClose */
+    client.close();
+  });
 });
