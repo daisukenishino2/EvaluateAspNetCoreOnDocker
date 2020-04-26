@@ -24,6 +24,20 @@ services:
       #- ./mongo/db:/data/db
       #- ./mongo/configdb:/data/configdb
 
+  mysql:
+    image: mysql
+    restart: always
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_ROOT_PASSWORD: seigi@123
+      MYSQL_DATABASE: test
+      TZ: 'Asia/Tokyo'
+    ports:
+    - 3306:3306
+    volumes:
+      #- ./mysql/data:/var/lib/mysql
+      - ./mysql/init:/docker-entrypoint-initdb.d
+
   postgres:
     image: postgres
     restart: always
