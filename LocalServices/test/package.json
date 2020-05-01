@@ -1,7 +1,6 @@
 {
   "name": "localservices",
   "version": "1.0.0",
-  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -9,13 +8,12 @@
     "assert": "^2.0.0",
     "ioredis": "^4.16.3",
     "mongodb": "^3.5.6",
-    "pg": "^8.0.3"
+    "mysql": "^2.18.1",
+    "pg": "^8.0.3",
+    "tedious": "^8.3.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
 }
