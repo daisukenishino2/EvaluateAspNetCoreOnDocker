@@ -9,7 +9,8 @@
     "ioredis": "^4.16.3",
     "mongodb": "^3.5.6",
     "mysql": "^2.18.1",
-    "pg": "^8.0.3"
+    "pg": "^8.0.3",
+    "tedious": "^8.3.0"
   },
   "devDependencies": {},
   "scripts": {
