@@ -9,6 +9,9 @@ https://www.osscons.jp/joerypz9u-537/#_537
 - 複数のDockerコンテナを使ったASP.NET Core検証環境を構築してみました。 - OSSコンソーシアム  
 https://www.osscons.jp/joq3nj6gs-537/#_537
 
+## LocalServices
+- サービス類だけ、Docker Compose化するプロジェクトが出来上がった。 - OSSコンソーシアム
+https://www.osscons.jp/jor9mt8li-537/#_537
 
 ## Open棟梁のバージョン
 v02-60のOpen棟梁テンプレートから持ってきた
