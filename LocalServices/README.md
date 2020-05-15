@@ -10,9 +10,14 @@ git clone https://github.com/daisukenishino2/EvaluateAspNetCoreOnDocker.git
 >cd ...\EvaluateAspNetCoreOnDocker\LocalServices
 ```
 
-以下のコマンドを実行する。
+以下のコマンドでコンテナを起動する。
 ```
 >docker-compose up -d
+```
+
+以下のコマンドでコンテナが停止する。
+```
+>docker-compose down
 ```
 
 テストを行う場合は、
