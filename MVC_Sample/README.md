@@ -5,7 +5,7 @@
 git clone https://github.com/daisukenishino2/EvaluateAspNetCoreOnDocker.git
 ```
 
-0_ExecAllBat.batをダブルクリックして、  
+0_ExecAllBat.bat をダブルクリックして、  
 実行し、ライブラリ類をNuGetから取得＆ビルド。
 
 次いで、このフォルダの MVC_Sample.sln を Visual Studio で開き、  
