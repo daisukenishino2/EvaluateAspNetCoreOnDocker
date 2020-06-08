@@ -24,7 +24,7 @@ git clone https://github.com/daisukenishino2/EvaluateAspNetCoreOnDocker.git
 
 以下のtestフォルダに移動し、
 ```
->cd ...\LocalServices\test
+>cd ...\LocalServices\test\nodejs
 ```
 
 以下のbatファイルを実行する。
@@ -40,4 +40,5 @@ git clone https://github.com/daisukenishino2/EvaluateAspNetCoreOnDocker.git
   - "ConnectionString_MCN": "Server=localhost;Database=test;User Id=root;Password=seigi@123",
   - "ConnectionString_NPS": "HOST=localhost;DATABASE=postgres;USER ID=postgres;PASSWORD=seigi@123;"
 - NoSQL
-  - ...
+  - redis : localhost
+  - mongodb : mongodb://seigi:seigi%40123@localhost:27017
